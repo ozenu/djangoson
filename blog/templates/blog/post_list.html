@@ -6,9 +6,31 @@
 
 	<body>
 
-		<a href = "http://zenillustration.carbonmade.com">ILLUSTRATION</a>
-		<p>Hi </p>
-		<p> IT LIVEES </p>
+		<div>
+			<a href = "http://zenillustration.carbonmade.com">ILLUSTRATION</a>
+
+		</div>
+
+
+		<div>
+
+			{% for post in posts %}	
+				<div>
+				
+				<p>published: {{ post.published_date }}</p>
+        		<h1><a href="">{{ post.title }}</a></h1>
+        		<p>{{ post.text|linebreaks }}</p>
+					
+				</div>		
+
+				
+
+			{% endfor %}
+
+		</div>
+			}
+		
+
 
 	</body>
 	
